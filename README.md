@@ -1,2 +1,2 @@
 # BusinessJamGuide
-Discover, compare and review companies based on their services.
+Discover, compare, recommend and review companies based on their services.
