@@ -20,5 +20,6 @@ namespace BusinessJamGuide.Models
         public virtual DbSet<Utilizadores> Utilizadores { get; set; }
         public virtual DbSet<Empresas> Empresas { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<Servicos> Servicos { get; set; }
     }
 }
