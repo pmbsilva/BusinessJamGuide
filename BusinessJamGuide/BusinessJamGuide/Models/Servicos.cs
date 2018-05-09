@@ -8,9 +8,9 @@ namespace BusinessJamGuide.Models
 {
     public class Servicos
     {
-        [Key]
-        public int ID { get; set; }
-        public string Nome { get; set; }
-        public string Area { get; set; }
+        //[Key]
+        //public int ID { get; set; }
+        //public string Nome { get; set; }
+        //public string Area { get; set; }
     }
 }

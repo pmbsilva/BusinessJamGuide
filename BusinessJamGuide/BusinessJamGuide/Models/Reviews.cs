@@ -11,7 +11,7 @@ namespace BusinessJamGuide.Models
     {
         [Key]
         public int ID { get; set; }
-        public string Review { get; set; }
+        public string Review { get; set; }"
         public DateTime DataReview { get; set; }
 
         // *********************************************************
