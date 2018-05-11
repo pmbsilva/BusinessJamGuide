@@ -108,6 +108,7 @@
     <Compile Include="Models\JamDb.cs" />
     <Compile Include="Models\Reviews.cs" />
     <Compile Include="Models\Servicos.cs" />
+    <Compile Include="Models\Servicos_Empresas.cs" />
     <Compile Include="Models\Utilizadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

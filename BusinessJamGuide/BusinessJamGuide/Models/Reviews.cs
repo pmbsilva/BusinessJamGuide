@@ -10,7 +10,7 @@ namespace BusinessJamGuide.Models
     public class Reviews
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Review { get; set; }
         public DateTime DataReview { get; set; }
         //rating 0-5

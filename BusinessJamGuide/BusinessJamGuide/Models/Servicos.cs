@@ -10,16 +10,16 @@ namespace BusinessJamGuide.Models
     {
         public Servicos()
         {
-            ListaDeEmpresas = new HashSet<Empresas>();
+            ListaDeEmpresas = new HashSet<Servicos_Empresas>();
         }
 
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Area { get; set; }
 
         // complementar a informação sobre o relacionamento
         // de uma Empresa com os Serviços a ela relacionadas
-        public virtual ICollection<Empresas> ListaDeEmpresas { get; set; }
+        public virtual ICollection<Servicos_Empresas> ListaDeEmpresas { get; set; }
     }
 }

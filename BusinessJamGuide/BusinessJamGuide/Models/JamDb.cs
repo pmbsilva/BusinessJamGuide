@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -21,5 +22,15 @@ namespace BusinessJamGuide.Models
         public virtual DbSet<Empresas> Empresas { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
         public virtual DbSet<Servicos> Servicos { get; set; }
+        public virtual DbSet<Servicos_Empresas> ServicosEmpresas { get; set; }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
