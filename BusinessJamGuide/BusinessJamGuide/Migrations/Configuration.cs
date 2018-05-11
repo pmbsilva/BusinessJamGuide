@@ -39,12 +39,12 @@ namespace BusinessJamGuide.Migrations
             // adiciona EMPRESAS
             var empresas = new List<Empresas>
             {
-                new Empresas {ID=1, Nome="Soluções Maravilha", Email="mailEmpresa1@gmail.com", Contacto="911234567", Morada="Rua da Empresa", CodigoPostal="1234-098", Localidade="Tomar", AreaDeFoco="Informática", Servicos="Redes", Website="www.SiteDaEmpresa1.com", Descricao="A melhor do setor!" },
-                new Empresas {ID=1, Nome="Critical Resolutions", Email="mailEmpresa2@gmail.com", Contacto="912234567", Morada="Rua da Empresa", CodigoPostal="1234-198", Localidade="Tomar", AreaDeFoco="Informática", Servicos="Desenvolvimento de Software, Redes", Website="www.SiteDaEmpresa2.com", Descricao="A melhor do setor!" },
-                new Empresas {ID=1, Nome="Bussiness Jam", Email="mailEmpresa3@gmail.com", Contacto="913234567", Morada="Rua da Empresa", CodigoPostal="1234-298", Localidade="Lisboa", AreaDeFoco="Informática", Servicos="Hub de Tecnologia", Website="www.SiteDaEmpresa3.com", Descricao="A melhor do setor!" },
-                new Empresas {ID=1, Nome="Connect4All", Email="mailEmpresa4@gmail.com", Contacto="914234567", Morada="Rua da Empresa", CodigoPostal="1234-398", Localidade="Porto", AreaDeFoco="Informática", Servicos="Redes", Website="www.SiteDaEmpresa4.com", Descricao="A melhor do setor!" },
-                new Empresas {ID=1, Nome="Empresa1", Email="mailEmpresa5@gmail.com", Contacto="915234567", Morada="Rua da Empresa", CodigoPostal="1234-498", Localidade="Coimbra", AreaDeFoco="Informática", Servicos="Desenvolvimento de Software", Website="www.SiteDaEmpresa5.com", Descricao="A melhor do setor!" },
-                new Empresas {ID=1, Nome="Empresa1", Email="mailEmpresa6@gmail.com", Contacto="916234567", Morada="Rua da Empresa", CodigoPostal="1234-598", Localidade="Covilhã", AreaDeFoco="Informática", Servicos="Consultoria", Website="www.SiteDaEmpresa6.com", Descricao="A melhor do setor!" }
+                new Empresas {ID=1, Nome="Soluções Maravilha", Email="mailEmpresa1@gmail.com", Contacto="911234567", Morada="Rua da Empresa", CodigoPostal="1234-098", Localidade="Tomar", AreaDeFoco="Informática", Website="www.SiteDaEmpresa1.com", Descricao="A melhor do setor!", ServicoFK=1 },
+                new Empresas {ID=1, Nome="Critical Resolutions", Email="mailEmpresa2@gmail.com", Contacto="912234567", Morada="Rua da Empresa", CodigoPostal="1234-198", Localidade="Tomar", AreaDeFoco="Informática", Website="www.SiteDaEmpresa2.com", Descricao="A melhor do setor!", ServicoFK=2 },
+                new Empresas {ID=1, Nome="Bussiness Jam", Email="mailEmpresa3@gmail.com", Contacto="913234567", Morada="Rua da Empresa", CodigoPostal="1234-298", Localidade="Lisboa", AreaDeFoco="Informática", Website="www.SiteDaEmpresa3.com", Descricao="A melhor do setor!", ServicoFK=3 },
+                new Empresas {ID=1, Nome="Connect4All", Email="mailEmpresa4@gmail.com", Contacto="914234567", Morada="Rua da Empresa", CodigoPostal="1234-398", Localidade="Porto", AreaDeFoco="Informática", Website="www.SiteDaEmpresa4.com", Descricao="A melhor do setor!", ServicoFK=4 },
+                new Empresas {ID=1, Nome="Empresa1", Email="mailEmpresa5@gmail.com", Contacto="915234567", Morada="Rua da Empresa", CodigoPostal="1234-498", Localidade="Coimbra", AreaDeFoco="Informática", Website="www.SiteDaEmpresa5.com", Descricao="A melhor do setor!", ServicoFK=5 },
+                new Empresas {ID=1, Nome="Empresa1", Email="mailEmpresa6@gmail.com", Contacto="916234567", Morada="Rua da Empresa", CodigoPostal="1234-598", Localidade="Covilhã", AreaDeFoco="Informática", Website="www.SiteDaEmpresa6.com", Descricao="A melhor do setor!", ServicoFK=6 }
 
             };
             empresas.ForEach(ee => context.Empresas.AddOrUpdate(e => e.Nome, ee));
@@ -68,6 +68,20 @@ namespace BusinessJamGuide.Migrations
                 new Reviews {ID=12, Review="Gostei muito dos serviços prestados. Foram extremamente prestáveis e mostraram-se sempre disponíveis a ajudar.", Rating=1, DataReview=new DateTime(2018,5,9), UtlizadorFK=3, EmpresaFK=6}
             };
             reviews.ForEach(rr => context.Reviews.AddOrUpdate(r => r.ID, rr));
+            context.SaveChanges();
+
+            //*********************************************************************
+            // adiciona SERVIÇOS
+            var servicos = new List<Servicos>
+            {
+                new Servicos {ID=1, Nome="Redes", Area="Tecnologia" },
+                new Servicos {ID=2, Nome="Desenvolvimento de Software", Area="Tecnologia" },
+                new Servicos {ID=3, Nome="Hub de Tecnologia", Area="Tecnologia" },
+                new Servicos {ID=4, Nome="Consultoria", Area="Tecnologia" },
+                new Servicos {ID=5, Nome="Análise de Sistemas", Area="Tecnologia" },
+                new Servicos {ID=6, Nome="Desenvolvimento Mobile", Area="Tecnologia" }
+            };
+            servicos.ForEach(ss => context.Servicos.AddOrUpdate(s => s.Nome, ss));
             context.SaveChanges();
         }
     }
