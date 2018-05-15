@@ -10,7 +10,11 @@ namespace BusinessJamGuide.Models
     {
         public Servicos()
         {
-            ListaDeEmpresas = new HashSet<Servicos_Empresas>();
+            //Tabela de Relação Com Criação Manual
+            //ListaDeEmpresas = new HashSet<Servicos_Empresas>();
+
+            //Criação Automática da Tabela de Relação
+            ListaDeEmpresas = new HashSet<Empresas>();
         }
 
         [Key]
@@ -18,8 +22,12 @@ namespace BusinessJamGuide.Models
         public string Nome { get; set; }
         public string Area { get; set; }
 
+        //Tabela de Relação Com Criação Manual
         // complementar a informação sobre o relacionamento
         // de uma Empresa com os Serviços a ela relacionadas
-        public virtual ICollection<Servicos_Empresas> ListaDeEmpresas { get; set; }
+        //public virtual ICollection<Servicos_Empresas> ListaDeEmpresas { get; set; }
+
+        //Criação Automática da Tabela de Relação
+        public virtual ICollection<Empresas> ListaDeEmpresas { get; set; }
     }
 }
