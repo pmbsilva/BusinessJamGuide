@@ -12,10 +12,6 @@ namespace BusinessJamGuide.Models
         public Empresas()
         {
             ListaDeReviews = new HashSet<Reviews>();
-            //Tabela de Relação Com Criação Manual
-            //ListaDeServicos = new HashSet<Servicos_Empresas>();
-
-            //Criação Automática da Tabela de Relação
             ListaDeServicos = new HashSet<Servicos>();
         }
 
@@ -35,12 +31,7 @@ namespace BusinessJamGuide.Models
         // de uma Empresa com as Reviews a ela relacionadas
         public virtual ICollection<Reviews> ListaDeReviews { get; set; }
 
-        //Tabela de Relação Com Criação Manual
-        // complementar a informação sobre o relacionamento
-        // de uma Empresa com os Serviços a ela relacionados
-        //public virtual ICollection<Servicos_Empresas> ListaDeServicos { get; set; }
-
-        //Criação Automática da Tabela de Relação
+        //Tabela de Relação
         public virtual ICollection<Servicos> ListaDeServicos { get; set; }
     }
 }

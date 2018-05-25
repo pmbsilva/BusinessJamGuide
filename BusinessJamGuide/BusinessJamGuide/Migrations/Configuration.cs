@@ -89,21 +89,7 @@ namespace BusinessJamGuide.Migrations
             };
             reviews.ForEach(rr => context.Reviews.AddOrUpdate(r => r.Id, rr));
             context.SaveChanges();
-
-            //*********************************************************************
-            // Tabela de Relação Com Criação Manual
-            // adiciona SERVICOS_EMPRESAS
-            //var servicosEmpresas = new List<Servicos_Empresas>
-            //{
-            //    new Servicos_Empresas {Id=1, IdEmpresaFK=1, IdServicoFK=6 },
-            //    new Servicos_Empresas {Id=2, IdEmpresaFK=2, IdServicoFK=5 },
-            //    new Servicos_Empresas {Id=3, IdEmpresaFK=3, IdServicoFK=3 },
-            //    new Servicos_Empresas {Id=4, IdEmpresaFK=4, IdServicoFK=4 },
-            //    new Servicos_Empresas {Id=5, IdEmpresaFK=5, IdServicoFK=2 },
-            //    new Servicos_Empresas {Id=6, IdEmpresaFK=6, IdServicoFK=1 }
-            //};
-            //servicosEmpresas.ForEach(zz => context.ServicosEmpresas.AddOrUpdate(z => z.Id, zz));
-            //context.SaveChanges();
+            
         }
     }
 }

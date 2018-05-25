@@ -22,9 +22,6 @@ namespace BusinessJamGuide.Models
         public virtual DbSet<Empresas> Empresas { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
         public virtual DbSet<Servicos> Servicos { get; set; }
-        //Tabela de Relação Com Criação Manual
-        //public virtual DbSet<Servicos_Empresas> ServicosEmpresas { get; set; }
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
