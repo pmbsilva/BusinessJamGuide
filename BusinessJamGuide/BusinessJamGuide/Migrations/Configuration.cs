@@ -58,7 +58,7 @@ namespace BusinessJamGuide.Migrations
                 new Empresas {Id=2, Nome="Critical Resolutions", Email="mailEmpresa2@gmail.com", Contacto="912234567", Morada="Rua da Empresa", CodigoPostal="1234-198", Localidade="Tomar", AreaDeFoco="Informática", Website="www.SiteDaEmpresa2.com", Descricao="A melhor do setor!",
                     ListaDeServicos =new List<Servicos>{ servicos[0], servicos[1] } },
                 new Empresas {Id=3, Nome="Bussiness Jam", Email="mailEmpresa3@gmail.com", Contacto="913234567", Morada="Rua da Empresa", CodigoPostal="1234-298", Localidade="Lisboa", AreaDeFoco="Informática", Website="www.SiteDaEmpresa3.com", Descricao="A melhor do setor!",
-                    ListaDeServicos =new List<Servicos>{ servicos[0], servicos[1] } },
+                    ListaDeServicos =new List<Servicos>{ servicos[2], servicos[3] } },
                 new Empresas {Id=4, Nome="Connect4All", Email="mailEmpresa4@gmail.com", Contacto="914234567", Morada="Rua da Empresa", CodigoPostal="1234-398", Localidade="Porto", AreaDeFoco="Informática", Website="www.SiteDaEmpresa4.com", Descricao="A melhor do setor!",
                     ListaDeServicos =new List<Servicos>{ servicos[0], servicos[1] } },
                 new Empresas {Id=5, Nome="Empresa1", Email="mailEmpresa5@gmail.com", Contacto="915234567", Morada="Rua da Empresa", CodigoPostal="1234-498", Localidade="Coimbra", AreaDeFoco="Informática", Website="www.SiteDaEmpresa5.com", Descricao="A melhor do setor!",
